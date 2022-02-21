@@ -283,6 +283,9 @@ func (c *PFCPClient) SendAndRecvHeartbeat() error {
 // SetupAssociation sends PFCP Association Setup Request and waits for PFCP Association Setup Response.
 // Returns error if the process fails at any stage.
 func (c *PFCPClient) SetupAssociation() error {
+    
+    fmt.Println ("Setup Association")
+
 	err := c.SendAssociationSetupRequest()
 	if err != nil {
 		return err
